@@ -5,15 +5,51 @@ body{
 #groc-container{
   background-color: #fff;
   width: 20em;
-  min-height: 3em;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   top: 10em;
   position:relative;
+  padding:50px;
 }
 
 #list-container{
   display: table;
   margin: 0 auto;
 
+}
+
+#edit-icon,
+#trash-icon {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin: 0 0.15rem;
+}
+li{
+  list-style-type: none;
+}
+.btn-container{
+  display: inline-block;
+}
+
+#edit-icon, #trash-icon{
+  transition: .3s;
+}
+
+#edit-icon{
+  color:  hsl(125, 71%, 66%);
+}
+
+#trash-icon{
+color: hsl(360, 71%, 66%);
+}
+
+#edit-icon:hover{
+  color: hsl(125, 67%, 44%);
+}
+
+#trash-icon:hover{
+color:  hsl(360, 67%, 44%);
 }
