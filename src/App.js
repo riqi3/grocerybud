@@ -15,7 +15,8 @@ function App() {
   return (
     <>
       <div id="groc-container">
-        <div id="list-container">
+        <h2>Grocery Bud</h2>
+        <div id="input-container">
           <Form
             input={input}
             setInput={setInput}
@@ -24,15 +25,12 @@ function App() {
             editList={editList}
             setEditList={setEditList}
           />
+         
+        </div> {/*-list container-*/}
+        <div id='list-container'>
+        <List id='list-js' list={list} setList={setList} setEditList={setEditList} />
         </div>
-        <div>
-          <List 
-          list={list} 
-          setList={setList}
-          setEditList={setEditList}
-          />
-        </div>
-      </div>
+      </div> {/*-groc container-*/}
     </>
   );
 }

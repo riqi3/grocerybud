@@ -33,7 +33,7 @@ const Form = ({ input, setInput, list, setList, editList, setEditList }) => {
 
 
   return (
-    <form onSubmit={onFormSubmit}>
+    <form onSubmit={onFormSubmit} className='form'>
       <input
         type="text"
         placeholder="e.g. Eggs"

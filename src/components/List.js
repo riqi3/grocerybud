@@ -12,7 +12,7 @@ const handleEdit = ({id})=>{
 
 
   return (
-    <div>
+    <div className="list-container-list">
       {list.map((list) => (
         <li className="item-list" key={list.id}>
           <input
