@@ -4,13 +4,18 @@ import Form from "./components/Form";
 import List from "./components/List";
 
 function App() {
+  const initialState = JSON.parse(localStorage.getItem("list")) || [];
+  const [list, setList] = useState(initialState);
   const [input, setInput] = useState("");
-  const [list, setList] = useState([]);
   const [editList, setEditList] = useState(null);
 
   useEffect(() => {
     localStorage.setItem("list", JSON.stringify(list));
   }, [list]);
+
+  const clearList = () => {
+    setList([]);
+  };
 
   return (
     <>
@@ -25,12 +30,25 @@ function App() {
             editList={editList}
             setEditList={setEditList}
           />
-         
-        </div> {/*-list container-*/}
-        <div id='list-container'>
-        <List id='list-js' list={list} setList={setList} setEditList={setEditList} />
+        </div>{" "}
+        {/*-list container-*/}
+        <div id="list-container">
+          <List
+            id="list-js"
+            list={list}
+            setList={setList}
+            setEditList={setEditList}
+          />
         </div>
-      </div> {/*-groc container-*/}
+        {list.length > 0 &&(
+          <div id="dabtn-container">
+          <button id="delete-all-btn" onClick={clearList}>
+            Delete All
+          </button>
+        </div>
+        )}
+      </div>
+      {/*-groc container-*/}
     </>
   );
 }

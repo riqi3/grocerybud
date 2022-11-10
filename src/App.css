@@ -1,55 +1,107 @@
-body{
+body {
   background-color: #323231;
 }
 
-#groc-container{
+#groc-container {
   background-color: #fff;
   width: 20em;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   top: 10em;
-  position:relative;
-  padding:50px;
+  position: relative;
+  padding: 30px;
   border-radius: 2px;
 }
 
-h2{
-  padding-bottom: 20px;
+h2 {
   text-align: center;
 }
 
-.list{
+.list {
   border: none;
   pointer-events: none;
   background: none;
+  width: 235px;
 }
 
+.submit-btn {
+  background-color: #a5d5f8;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 2px;
+  padding: 5px;
+  border-radius: 0px 5px 5px 0px;
+  width: 7em;
+}
+.submit-btn:hover {
+  background-color: #49a6e9;
+  color: #fff;
+}
 
-#input-container{
+#input-container {
   padding-bottom: 20px;
 }
-.form, #list-container{
+.form,
+#list-container {
   display: flex;
 }
 
-.item-list{
-  transition: .2s;
+.list-container-list {
+  width: -webkit-fill-available;
+}
+
+.item-list {
+  transition: 0.2s;
   background: #fff;
-  width: -webkit-fill-available;
 }
 
-#task-input{
-  width: -webkit-fill-available;
+.task-input {
+  width: -webkit-fill-available !important;
 }
 
-.task-input, .list{
-  padding: 2px 10px;
+svg{
+  width: 1.2em;
+  height: 1.2em;
 }
 
-.item-list:hover{
+.task-btn{
+  width: 20px;
+  height: 20px;
+}
+
+.task-input,
+.list {
+  padding: 5px 10px;
+}
+
+#delete-all-btn {
+  background: none;
+  color: #e66b6b;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+}
+#delete-all-btn:hover {
+  transition: 0.3s;
+  color: #bb2525;
+}
+
+.btn-container {
+  display: inline-block;
+}
+#dabtn-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.item-list:hover {
   background: #f3f3f3;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 #edit-icon,
@@ -60,29 +112,31 @@ h2{
   font-size: 0.7rem;
   margin: 0 0.15rem;
 }
-li{
+li {
   list-style-type: none;
 }
-.btn-container{
-  display: inline-block;
+
+.list-wrapper{
+  margin: 10px 0px;
 }
 
-#edit-icon, #trash-icon{
-  transition: .3s;
+#edit-icon,
+#trash-icon {
+  transition: 0.3s;
 }
 
-#edit-icon{
-  color:  hsl(125, 71%, 66%);
+#edit-icon {
+  color: #6be675;
 }
 
-#trash-icon{
-color: hsl(360, 71%, 66%);
+#trash-icon {
+  color: #e66b6b;
 }
 
-#edit-icon:hover{
-  color: hsl(125, 67%, 44%);
+#edit-icon:hover {
+  color: #25bb32;
 }
 
-#trash-icon:hover{
-color:  hsl(360, 67%, 44%);
+#trash-icon:hover {
+  color: #bb2525;
 }

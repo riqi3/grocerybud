@@ -5,6 +5,8 @@ const List = ({ list, setList, setEditList }) => {
 const handleRemove = ({id}) => {
     setList(list.filter((list)=>list.id !== id));
 };
+
+
 const handleEdit = ({id})=>{
     const findList = list.find((list)=> list.id ===id);
     setEditList(findList);
@@ -15,6 +17,7 @@ const handleEdit = ({id})=>{
     <div className="list-container-list">
       {list.map((list) => (
         <li className="item-list" key={list.id}>
+          <div className="list-wrapper">
           <input
             type="text"
             value={list.title}
@@ -28,6 +31,7 @@ const handleEdit = ({id})=>{
             <button id="trash-icon" className="btn-remove task-btn" onClick={()=> handleRemove(list)}>
             <FaTrash></FaTrash>
             </button>
+          </div>
           </div>
         </li>
       ))}
