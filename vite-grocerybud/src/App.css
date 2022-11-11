@@ -1,32 +1,40 @@
 body {
   background-color: #323231;
+  margin: 0;
+  display: flow-root;
 }
 
 #groc-container {
+  color: #323231;
   background-color: #fff;
-  width: 20em;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  top: 10em;
-  position: relative;
+  width: 23.1em;
   padding: 30px;
+
+  margin: 0 auto;
+  margin-top: 8rem;
+
   border-radius: 2px;
+  transition: 0.3s;
 }
 
 h2 {
   text-align: center;
 }
-
+button {
+  width: 5em;
+}
 .list {
   border: none;
   pointer-events: none;
   background: none;
-  width: 235px;
+  /* width: 305px; */
+  color: #323231;
+  font-size: medium;
 }
 
 .submit-btn {
-  background-color: #a5d5f8;
+  background-color: #6be675;
   border: none;
   cursor: pointer;
   transition: 0.3s;
@@ -36,7 +44,7 @@ h2 {
   width: 7em;
 }
 .submit-btn:hover {
-  background-color: #49a6e9;
+  background-color: #25bb32;
   color: #fff;
 }
 
@@ -59,16 +67,18 @@ h2 {
 
 .task-input {
   width: -webkit-fill-available !important;
+  color: #323231;
+  background-color: whitesmoke;
+  font-size: medium;
 }
 
-svg{
+svg {
   width: 1.2em;
   height: 1.2em;
 }
 
-.task-btn{
-  width: 20px;
-  height: 20px;
+.task-btn {
+  font-size: 2em;
 }
 
 .task-input,
@@ -78,17 +88,18 @@ svg{
 
 #delete-all-btn {
   background: none;
-  color: #e66b6b;
+  color: #fff;
+  background-color: #e66b6b;
   border: none;
   cursor: pointer;
   transition: 0.3s;
-  padding: 0;
   font: inherit;
   outline: inherit;
+  width: -webkit-fill-available;
 }
 #delete-all-btn:hover {
   transition: 0.3s;
-  color: #bb2525;
+  background-color: #bb2525;
 }
 
 .btn-container {
@@ -111,12 +122,14 @@ svg{
   cursor: pointer;
   font-size: 0.7rem;
   margin: 0 0.15rem;
+  width: auto;
+  font-size: small !important;
 }
 li {
   list-style-type: none;
 }
 
-.list-wrapper{
+.list-wrapper {
   margin: 10px 0px;
 }
 
@@ -126,17 +139,40 @@ li {
 }
 
 #edit-icon {
-  color: #6be675;
+  color: #fff;
+  background-color: #6be675;
 }
 
 #trash-icon {
-  color: #e66b6b;
+  color: #fff;
+  background-color: #e66b6b;
 }
 
 #edit-icon:hover {
-  color: #25bb32;
+  background-color: #25bb32;
 }
 
 #trash-icon:hover {
-  color: #bb2525;
+  background-color: #bb2525;
+}
+
+.alert-danger {
+  color: #721c24;
+  background: #f8d7da;
+  text-align: center;
+  padding: 5px;
+}
+
+.alert-success {
+  color: #155724;
+  background: #d4edda;
+  text-align: center;
+  padding: 5px;
+}
+
+.alert-warning {
+  color: #c0a718;
+  background: #f3ebc6;
+  text-align: center;
+  padding: 5px;
 }
